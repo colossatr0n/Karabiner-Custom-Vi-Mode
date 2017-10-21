@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<root>
+
+<modifierdef>MY_VI_MODE</modifierdef>
+<item>
+    <name>Custom Vi-Mode.</name>
+    <appendix>Enable by holding down S and D. Changes the following keys:</appendix>
+    <appendix>J = LEFT ARROW KEY</appendix>
+    <appendix>L = RIGHT ARROW KEY</appendix>
+    <appendix>I = UP ARROW KEY</appendix>
+    <appendix>K = DOWN ARROW KEY</appendix>
+    <appendix>H = OPTION + LEFT ARROW KEY (place cursor back an entire word)</appendix>
+    <appendix>; = OPTION + RIGHT ARROW KEY (place cursor forward an entire word)</appendix>
+    <appendix>U = DELETE</appendix>
+    <appendix>Y = OPTION + DELETE (deletes entire word in Microsoft Word. Change to CNTRL+W to do this in Terminal)</appendix>
+    <appendix>O = ENTER</appendix>
+    <appendix></appendix>
+    <appendix>(Disables all other keys when S and D is pressed.)</appendix>
+    <identifier>private.right_option_vi_mode</identifier>
+    
+    <!-- my vi mode keymap -->
+    <block>
+        <modifier_only>ModifierFlag::MY_VI_MODE</modifier_only>
+        
+        <autogen>__KeyToKey__ KeyCode::J, KeyCode::CURSOR_LEFT</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_DOWN</autogen>
+        <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_UP</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
+        <autogen>__KeyToKey__ KeyCode::U, KeyCode::DELETE</autogen>
+        <autogen>__KeyToKey__ KeyCode::O, KeyCode::RETURN</autogen>
+        <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::H,
+            KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_R,
+        </autogen>
+        <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::SEMICOLON,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_R,
+        </autogen>
+        <autogen>
+            __KeyOverlaidModifier__
+            KeyCode::Y,
+            KeyCode::DELETE, ModifierFlag::OPTION_L,
+        </autogen>
+
+        <!-- Drop all events which are not modified in above. -->
+        <autogen>
+            __DropAllKeys__
+            ModifierFlag::MY_VI_MODE,
+            
+            Option::DROPALLKEYS_DROP_KEY,
+            Option::DROPALLKEYS_DROP_CONSUMERKEY,
+            Option::DROPALLKEYS_DROP_POINTINGBUTTON,
+        </autogen>
+    </block>
+    
+    <!-- trigger -->
+    <autogen>
+       <!-- __KeyToKey__ -->
+       __SimultaneousKeyPresses__
+       KeyCode::S, KeyCode::D,
+        KeyCode::VK_MODIFIER_MY_VI_MODE,
+    </autogen>
+</item>
+</root>
