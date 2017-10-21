@@ -3,6 +3,7 @@
 
 <modifierdef>MY_VI_MODE</modifierdef>
 <item>
+    <!-- All of the text in this block is just data for Karabiner to display about this custom Vi-Mode. -->
     <name>Custom Vi-Mode.</name>
     <appendix>Enable by holding down S and D. Changes the following keys:</appendix>
     <appendix>J = LEFT ARROW KEY</appendix>
@@ -18,7 +19,7 @@
     <appendix>(Disables all other keys when S and D is pressed.)</appendix>
     <identifier>private.right_option_vi_mode</identifier>
     
-    <!-- my vi mode keymap -->
+<!-- Here is the actual key remapping. Change any of the KeyCodes to different KeyCodes to change which keys Vi-Mode will modify. You can find KeyCodes online. -->
     <block>
         <modifier_only>ModifierFlag::MY_VI_MODE</modifier_only>
         
@@ -55,7 +56,7 @@
         </autogen>
     </block>
     
-    <!-- trigger -->
+<!-- These are the keys that will be pressed to trigger Vi-Mode. Change S and D to anything you want. You can even delete one of the two KeyCodes to make it so you only have to press one key, or you could enable more KeyCodes so you have to press more than two keys. -->
     <autogen>
        <!-- __KeyToKey__ -->
        __SimultaneousKeyPresses__
