@@ -23,12 +23,12 @@ H = OPTION + LEFT ARROW KEY (place cursor back an entire word)
 
 Delete
 ----------------------
-U = DELETE
+O = DELETE
 
 Y = OPTION + DELETE (deletes entire word in Microsoft Word. Change to CNTRL+W to do this in Terminal)
 
 Enter
 -----------------------
-O = ENTER
+U = ENTER
 
 Once S and D are released, all the keys return to their normal unmodified state.
