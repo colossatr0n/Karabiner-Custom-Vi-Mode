@@ -12,9 +12,9 @@
     <appendix>K = DOWN ARROW KEY</appendix>
     <appendix>H = OPTION + LEFT ARROW KEY (place cursor back an entire word)</appendix>
     <appendix>; = OPTION + RIGHT ARROW KEY (place cursor forward an entire word)</appendix>
-    <appendix>U = DELETE</appendix>
+    <appendix>O = DELETE</appendix>
     <appendix>Y = OPTION + DELETE (deletes entire word in Microsoft Word. Change to CNTRL+W to do this in Terminal)</appendix>
-    <appendix>O = ENTER</appendix>
+    <appendix>U = ENTER</appendix>
     <appendix></appendix>
     <appendix>(Disables all other keys when S and D is pressed.)</appendix>
     <identifier>private.right_option_vi_mode</identifier>
@@ -27,8 +27,8 @@
         <autogen>__KeyToKey__ KeyCode::K, KeyCode::CURSOR_DOWN</autogen>
         <autogen>__KeyToKey__ KeyCode::I, KeyCode::CURSOR_UP</autogen>
         <autogen>__KeyToKey__ KeyCode::L, KeyCode::CURSOR_RIGHT</autogen>
-        <autogen>__KeyToKey__ KeyCode::U, KeyCode::DELETE</autogen>
-        <autogen>__KeyToKey__ KeyCode::O, KeyCode::RETURN</autogen>
+        <autogen>__KeyToKey__ KeyCode::O, KeyCode::DELETE</autogen>
+        <autogen>__KeyToKey__ KeyCode::U, KeyCode::RETURN</autogen>
         <autogen>
             __KeyOverlaidModifier__
             KeyCode::H,
