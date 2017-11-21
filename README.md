@@ -1,4 +1,4 @@
-# karabiner-custom-vi-mode
+# Karabiner Custom Vi-Mode
 A custom Vi-Mode that can be used in the private.xml for Karabiner. Vi-Mode enables custom keys to be used only when a combination of keys (Vi-Mode) is pressed and held. The layout presented below is supposed to be as intuitive as possible.
 
 This custom Vi-Mode is enabled when the user holds down S and D. The amount of keys held and the type of keys held to enable Vi-Mode can be easily changed. The keys that get modified when Vi-Mode is enable can also be easily changed.
